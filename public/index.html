@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Freelance Marketplace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body ng-app="MarketplaceApp" ng-controller="ProjectManagerController">
+
+    <h1>Project Manager Home Screen</h1>
+    <form>
+        <input type="text" ng-model="newProject.name" name="name" placeholder="Project Name" required/>
+        <input type="text" ng-model="newProject.description" name="description" placeholder="Project Description" required/>
+        <select name="type" ng-model="newProject.type" placeholder="Work Type" required>
+            <option value="Front-End">Front-End</option>
+            <option value="Back-End">Back-End</option>
+            <option value="Full-Stack">Full-Stack</option>
+        </select>
+        <input type="date" ng-model="newProject.deadline" name="deadline" required/>
+        <input type="number" ng-model="newProject.budget" name="budget" min="10" step="0.01" placeholder="Maximum Budget" required/>
+        <button ng-click="createProject($event)">Create Project</button>
+    </form>
+
+    <div id="projects-list"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

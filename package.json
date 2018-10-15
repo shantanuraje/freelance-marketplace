@@ -4,6 +4,7 @@
   "description": "A marketplace for freelancers and project managers",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
